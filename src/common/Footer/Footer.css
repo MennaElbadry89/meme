@@ -1,0 +1,74 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+     background-color: rgb(240, 250, 250);
+     width: 100%;
+     position: static;
+     bottom: 0;
+}
+.Footer .top .row div >div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.Footer div b{
+    color: var(--secondry-color); 
+    width: max-content;
+    font-size: 20px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.Footer div ul li{
+    list-style: none;
+}
+.Footer div ul li a{
+    color: black;
+    opacity: .8;
+    text-decoration: none;
+
+}
+.Footer div ul li a:hover{
+    color: var(--secondry-color);
+}
+.Footer div ul li .icon{
+    font-size: 20px;
+    color: var(--secondry-color);
+    cursor: pointer;
+}
+
+.Footer .top div .NEWSLETTER .mail{
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0;
+}
+.Footer .top div .NEWSLETTER .mail input{
+    width: 80%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 8px 15px;
+
+}
+.Footer .top div .NEWSLETTER button{
+    background-color: var(--secondry-color) !important;
+}
+
+.Footer .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+}
+
+.Footer .bottom p a{
+    color: var(--secondry-color);
+    text-decoration: none;
+    font-weight: 700;        
+    cursor: pointer;
+
+}
+.Footer .bottom img{
+        cursor: pointer;
+
+} 

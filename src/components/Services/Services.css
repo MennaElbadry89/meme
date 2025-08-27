@@ -1,0 +1,20 @@
+.Services .flex{
+    /* gap: 10px !important; */
+}
+
+.Services .flex div{
+    width: 25vw !important;
+
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    padding: 20px ;
+    gap: 10px !important;
+}
+
+@media (max-width : 720px) {
+
+.Services .flex div{
+width: 100% !important;
+}
+    
+}

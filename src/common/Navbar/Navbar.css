@@ -1,0 +1,53 @@
+.Navbar nav{
+    background-color: rgb(240, 250, 250);
+
+}
+.nav-link.active{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--secondry-color) !important;
+
+}
+.Navbar nav .icon{
+    color: var(--main-color) !important;
+    font-size: 20px;
+}
+.Navbar nav sub{
+    font-size: 20px;
+    color: var(--secondry-color) !important;
+}
+
+.Navbar .authHandler{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.Navbar .authHandler a{
+    text-decoration: none;
+    /* font-size: 18px; */
+    padding: 5px;
+
+}
+.Navbar .authHandler a:hover{
+    font-weight: 700;
+    color: var(--secondry-color) !important;
+}
+.Navbar .authHandler a:first-child{
+    padding-right: 5px;
+    /* border-right: 1px solid var(--secondry-color) ; */
+}
+.Navbar .authHandler  .dropdown-menu{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: max-content !important;
+}
+.Navbar .authHandler .btn-info{
+    width: 100%;
+
+}

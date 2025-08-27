@@ -1,0 +1,50 @@
+.Header .slidr .bags,
+.Header .slidr .colthes,
+.Header .slidr .shoes{
+    height: 60vh;
+    padding: 0 40px;
+    color: white;
+
+}
+.Header .slidr .bags{
+    background: linear-gradient(rgba(0,0,0,.6) , rgba(0,0,0, .6)) , url(../../../public/imag/10.jpg) no-repeat center;
+    background-size: contain;
+
+}
+.Header .slidr .colthes{
+    background: linear-gradient(rgba(0,0,0,.6) , rgba(0,0,0, .6)) , url(../../../public/imag/1.jpg) no-repeat center;
+    background-size: contain;
+}
+.Header .slidr .shoes{
+    background: linear-gradient(rgba(0,0,0,.6) , rgba(0,0,0, .6)) , url(../../../public/imag/24.jpg) no-repeat center;
+    background-size: contain;
+
+}
+
+.offers{
+    height: 60vh;
+    gap: 10px;
+}
+.offers > div {
+    height: calc((100% - 20px) / 3);
+   color: white;
+   gap: 3px;
+
+}
+.offers .offer1{
+      background: url(../../../public/imag/6.jpg) no-repeat center;
+      background-size: cover;
+}
+.offers .offer2{
+      background: url(../../../public/imag/12.jpg) no-repeat center;
+      background-size: cover;
+}
+.offers .offer3{
+      background: url(../../../public/imag/55.jpg) no-repeat center;
+      background-size: cover;
+}
+
+.offers > div .btn-primary{
+    border: 1px solid var(--main-color) !important;
+}
+

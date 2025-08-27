@@ -1,0 +1,41 @@
+.Contact form{
+    background-color: white;
+    padding-top: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+.Contact form input , .Contact form #message{
+    width: 90%;
+    padding: 5px 20px;
+    background-color: rgb(240, 238, 238);
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+.Contact form #message{
+    height: 200px;
+
+}
+.Contact form .btn{
+    
+
+}
+
+.map{
+    border: 1px solid lightgray;
+    border-radius: 10px ;
+}
+.contac{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+.location , .message , .phone{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    opacity: .5;
+
+}
