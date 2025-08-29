@@ -22,7 +22,6 @@ export default function Contact(){
                             <textarea name="" id="message" placeholder='message'></textarea>
                             <button className='btn btn-info '>Send Message</button>
                         </form>
-
                     </div>
                     <div className="col-lg-4"> 
                         <div className='bg-white map'>     
@@ -49,16 +48,14 @@ export default function Contact(){
                                 <FaPhoneAlt  style={{color: 'var(--main-color)'}}/>
                                 <b>0120011001100</b>
                             </div>
-
                         </div>
-                    </div>
-
                     </div>
                 </div>
             </div>
-           <div>
-           
         </div>
+    <div>
+           
+</div>
         
         </>
     )

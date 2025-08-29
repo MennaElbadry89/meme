@@ -5,7 +5,7 @@
 .Services .flex div{
     width: 25vw !important;
 
-    border: 1px solid var(--main-color);
+    border: 1px solid var(--secondry-color);
     border-radius: 5px;
     padding: 20px ;
     gap: 10px !important;

@@ -21,8 +21,6 @@ export default function About(){
                         <p className='my-3 h5 opacity-75'><span style={{color: "var(--secondry-color)", fontWeight: '700'}}>Meme Store</span> is your best distination for online Shopping. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam expedita dolore omnis cumque ipsa vel nam non necessitatibus eius, molestiae officiis, rem et distinctio? Nisi voluptates amet in aliquam sapiente</p>
                         <button className='btn btn-primary text-dark border border-1'>
                             <Link to={'/shop'} style={{textDecoration : 'none'}}>Shop Now</Link></button>
-
-
                     </div>
                 </div>
             </div>

@@ -25,6 +25,7 @@ export const WishListContextProvider = ({children})=>{
     //     }
 
     // }, [])
+    
      useEffect(()=>{
         let x = localStorage.getItem('wishListItems')
         if(x){
@@ -46,14 +47,20 @@ export const WishListContextProvider = ({children})=>{
     },[wishListItems])
 
 
-    const addToWishList = (product )=>{
+    const addToWishList = (product, isAuthenticated = false )=>{
+        // Check if user is authenticated
+        if (!isAuthenticated) {
+            return { success: false, needsAuth: true, message: "Please login or register to add items to wishlist" }
+        }  
        
         const x = wishListItems.some(item => item.id === product.id)
-        const y = records.some(item => item.id === product.id)
 
-        if(!x && product.stock === 0 && !y){
+        if(!x && product.stock === 0){
         setwishListItems([...wishListItems, product])
-        }
+        return { success: true, needsAuth: false } 
+        }else {
+        return { success: false, needsAuth: false, message: "Already in wishlist" };
+    }
     }
 
 

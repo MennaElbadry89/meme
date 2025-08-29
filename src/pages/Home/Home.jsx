@@ -4,8 +4,6 @@ import Header from '../../components/Header/Header';
 import Services from '../../components/Services/Services';
 import Catogries from '../../components/catogries/Catogries';
 import Shop from '../Shop/Shop'; 
-import Products from '../../components/Products/Products';
-
 import AutoPlay from '../slider/AutoPlay'
 import Contact from '../Contact/Contact'
 

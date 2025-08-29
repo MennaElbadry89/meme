@@ -1,3 +1,4 @@
+
 import axios from "axios"
 import { createContext , useEffect, useState } from "react"
 import Swal from "sweetalert2"
@@ -22,22 +23,21 @@ export const CartContextProvider = ({children})=>{
         }else{
             setCartIdes({})
         }
-
     }, [])
+
+
     const addToCart = (id, isAuthenticated = false)=>{
         // Check if user is authenticated
         if (!isAuthenticated) {
             return { success: false, needsAuth: true, message: "Please login or register to add items to cart" }
-        }
-        
+        }        
         if( !cartIdes[id]){
             cartIdes[id] = 1
         }else{
             ++cartIdes[id]
         }
         setCartIdes({...cartIdes})
-        return { success: true, needsAuth: false }
-          
+        return { success: true, needsAuth: false }          
     }
 
     const getProductOfCart = async()=>{
@@ -61,17 +61,15 @@ export const CartContextProvider = ({children})=>{
     }
 
     const handlechangeAmount = (id , amount)=>{
+        
         console.log(id , amount)
         cartIdes[id ] = +amount       //+ to convert string into number
         setRecoeds([...records])
-
+ 
 }
 
-    const handelDelete = (Product, isAuthenticated = false)=>{
-        // Check if user is authenticated
-        if (!isAuthenticated) {
-            return { success: false, needsAuth: true, message: "Please login or register to modify cart" }
-        }
+    const handelDelete = (Product)=>{
+               
         Swal.fire({
         title: "Are you sure to delete items from cart",
         text: "You won't be able to revert this!",
@@ -83,6 +81,7 @@ export const CartContextProvider = ({children})=>{
         }).then((result) => {
         if (result.isConfirmed) {
         delete cartIdes[ Product.id ]
+        setCartIdes({...cartIdes}) 
         const newFilteredArry = records.filter(el => el.id !== Product.id)
         setRecoeds(newFilteredArry)
         Swal.fire({
@@ -93,8 +92,6 @@ export const CartContextProvider = ({children})=>{
     });
   }
 });
-        return { success: true, needsAuth: false }
-
 }
 
     const clearCartData = ()=>{

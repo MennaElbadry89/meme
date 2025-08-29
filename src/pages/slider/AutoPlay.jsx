@@ -7,7 +7,7 @@ import img3 from '../../../public/imag/imgi_15.jpg'
 import img4 from '../../../public/imag/imgi_16.jpg'
 import img5 from '../../../public/imag/imgi_17.jpg'
 // import { Autoplay } from "swiper/modules";
-// import 
+
 
 
 export default function AutoPlay() {

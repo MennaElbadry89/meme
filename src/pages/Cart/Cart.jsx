@@ -1,6 +1,5 @@
 import  './Cart.css'
 import React, { useEffect , useState , useRef} from "react";
-// import mmm from '../../../public/imag/6.jpg'
 import { useContext } from 'react';
 import { cartContext } from '../../context/CartContext';
 import LottiHandeler from '../../assets/Lottifiles/LottiHandeler';
@@ -75,7 +74,6 @@ export default function Cart(){
                         navigate('/');
                     }
                 });
-
             }
         }, [currentUser, loadingDisplayCurrentUser, navigate])
 

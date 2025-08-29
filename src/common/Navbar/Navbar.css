@@ -29,6 +29,7 @@
 
 .Navbar .authHandler a{
     text-decoration: none;
+    color: rgb(19, 18, 18, 0.7) !important;
     /* font-size: 18px; */
     padding: 5px;
 

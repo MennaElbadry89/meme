@@ -1,14 +1,15 @@
 
 
 import  './Wishlist.css'
-import React, {  useState } from "react";
-// import mmm from '../../../public/imag/6.jpg'
+import React, {  useState , useEffect} from "react";
 import { useContext } from 'react';
 import { wishListContext } from '../../context/WishListContext';
 import LottiHandeler from '../../assets/Lottifiles/LottiHandeler';
 import { authContext } from '../../context/AuthContext';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
+
 
 
 export default function Wishlist(){
@@ -20,6 +21,26 @@ export default function Wishlist(){
        const { wishListItems , handelDelete  } = useContext(wishListContext)    
        const {currentUser, loadingDisplayCurrentUser} = useContext(authContext)
        
+ useEffect(() => {
+            if (!currentUser && !loadingDisplayCurrentUser) {
+                Swal.fire({
+                    title: "Authentication Required",
+                    text: "Please login or register to view your wishlist",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Register or Login",
+                    cancelButtonText: "Cancel"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        navigate('/register');
+                    } else {
+                        navigate('/');
+                    }
+                });
+            }
+        }, [currentUser, loadingDisplayCurrentUser, navigate])
       
        return(
            <>

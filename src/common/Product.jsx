@@ -50,6 +50,7 @@ export default function Product({value}){
     //         }
     //     } , 1000)      
     // }
+    
 const handleAddToCart = (product)=>{
         // Check if user is authenticated
         if (!currentUser) {
@@ -80,13 +81,13 @@ const handleAddToCart = (product)=>{
                title: "successfull operation",
                text: "click the button",
                icon: "success" ,
-               timer: 1000 ,
+               timer: 1500 ,
                showConfirmButton: 'false'
              });
                 }else{
                     toast.success(`You have ${cartIdes[product.id]} of this product`)           
                 }
-            } , 1000)
+            } , 1500)
         } else if (result.needsAuth) {
             Swal.fire({
                 title: "Authentication Required",
@@ -126,10 +127,7 @@ const handleAddToCart = (product)=>{
                             <b className='fs-4 text-center d-block opacity-50'> {productFullInfo.catogery}</b>
                             <p className='fw-bold m-0 'style={{color: 'var(--main-color'} }> {finalPrice}$  
                                 <del className='fw-bold m-0 text-danger opacity-50'>  {productFullInfo.discount}%</del></p>
-                            {/* <p className="m-0 ">You can add ({productFullInfo}) 
-                             
-                             Still ({productFullInfo.stock - productFullInfo.amount}) 
-                             </p> */}
+                            
                             <div className="text-warning h5"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></div>
                             <div className="procces flex justify-content-between w-100">
                                 <button className="btn"  onClick={()=>addToWishList(value)}>
