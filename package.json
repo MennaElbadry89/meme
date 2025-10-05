@@ -2,7 +2,7 @@
   "name": "me",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://mennaelbadry89.github.io/memestore",
+  "homepage": ".",
   "type": "module",
   "scripts": {
     "dev": "vite",

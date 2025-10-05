@@ -7,8 +7,6 @@ import toast, { Toaster } from 'react-hot-toast';
 const Layout = lazy(()=> import('./layout/Layout/Layout'))
 const Home = lazy(()=> import('./pages/Home/Home'))
 const About = lazy(()=> import('./pages/About/About'))
-// const Products = lazy(()=> import('./components/Products/Products'))
-
 const Shop = lazy(()=> import('./pages/Shop/Shop'))
 const Shoes = lazy(()=> import('./pages/Shoes/Shoes'))
 const SaleShoes = lazy(()=> import('./pages/Shoes/SaleShoes'))
@@ -25,12 +23,7 @@ const Profile = lazy(()=> import('./common/Profile/Profile'))
 const Orders = lazy(()=> import('./pages/Orders/Orders'))
 
 
-
-
-
-
-function App() {
-   
+function App() {   
 const router = createBrowserRouter([
   {
     path : '/',
@@ -56,8 +49,6 @@ const router = createBrowserRouter([
                 <Suspense fullback={<LottiHandeler status= 'page' />}> <SaleClothes/></Suspense> },
       {path: 'contact' , element :
                 <Suspense fullback={<LottiHandeler status= 'page' />}> <Contact/></Suspense> },
-      // {path: 'products' , element :
-      //           <Suspense fullback={<LottiHandeler status= 'page' />}> <Products/></Suspense> },
       {path: 'cart' , element :
                 <Suspense fullback={<LottiHandeler status= 'cart' />}> <Cart/></Suspense> },
       {path: 'wishlist' , element :
@@ -69,18 +60,16 @@ const router = createBrowserRouter([
       {path: 'profile' , element :
                 <Suspense fullback={<LottiHandeler status= 'page' />}> <Profile/></Suspense> },
       {path: 'orders' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <Orders/></Suspense> }
-      
+                <Suspense fullback={<LottiHandeler status= 'page' />}> <Orders/></Suspense> }      
     ],
     errorElement : <LottiHandeler status= 'Err' />
   }
-])
+],
+{basename: '/meme'}
+)
 return <>
 < RouterProvider router={router}/>
 < Toaster />
 </>
-
-
 }
-
 export default App

@@ -1,5 +1,3 @@
-
-
 import  './Wishlist.css'
 import React, {  useState , useEffect} from "react";
 import { useContext } from 'react';
@@ -10,11 +8,8 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
-
-
 export default function Wishlist(){
 
-   
        const[isLoading , setIsLoading] = useState(false)   
        const navigate = useNavigate()
    

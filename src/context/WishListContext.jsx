@@ -11,7 +11,7 @@ export const wishListContext = createContext()
 
 export const WishListContextProvider = ({children})=>{
 
-    const {records} = useContext(cartContext)
+    // const {records} = useContext(cartContext)
     const [wishListItems , setwishListItems] = useState([])
     
     // localStorage.clear()
@@ -49,17 +49,17 @@ export const WishListContextProvider = ({children})=>{
 
     const addToWishList = (product, isAuthenticated = false )=>{
         // Check if user is authenticated
-        if (!isAuthenticated) {
-            return { success: false, needsAuth: true, message: "Please login or register to add items to wishlist" }
-        }  
+        // if (!isAuthenticated) {
+        //     return { success: false, needsAuth: true, message: "Please login or register to add items to wishlist" }
+        // }  
        
         const x = wishListItems.some(item => item.id === product.id)
 
         if(!x && product.stock === 0){
         setwishListItems([...wishListItems, product])
-        return { success: true, needsAuth: false } 
-        }else {
-        return { success: false, needsAuth: false, message: "Already in wishlist" };
+        // return { success: true, needsAuth: false } 
+        // }else {
+        // return { success: false, needsAuth: false, message: "Already in wishlist" };
     }
     }
 
@@ -87,36 +87,6 @@ export const WishListContextProvider = ({children})=>{
   }
 });
 }
-//  const handelDelete = (Product, isAuthenticated = false)=>{
-//         // Check if user is authenticated
-//         if (!isAuthenticated) {
-//             return { success: false, needsAuth: true, message: "Please login or register to modify cart" }
-//         }
-//         Swal.fire({
-//         title: "Are you sure to delete items from cart",
-//         text: "You won't be able to revert this!",
-//         icon: "warning",
-//         showCancelButton: true,
-//         confirmButtonColor: "red",
-//         cancelButtonColor: "#d33",
-//         confirmButtonText: "Yes, delete it!"
-//         }).then((result) => {
-//         if (result.isConfirmed) {
-//         delete wishListItems[ Product]
-//         const newFilteredArry = wishListItems.filter(el => el.id !== Product)
-//         setRecoeds(newFilteredArry)
-//         Swal.fire({
-//         title: "Deleted!",
-//         text: "Your file has been deleted.",
-//         icon: "success" ,
-//         timer: 1500
-//     });
-//   }
-// });
-//         return { success: true, needsAuth: false }
-
-// }
-
 
     const clearWishListData = ()=>{
         setwishListItems([])
