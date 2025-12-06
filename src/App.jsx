@@ -65,7 +65,7 @@ const router = createBrowserRouter([
     errorElement : <LottiHandeler status= 'Err' />
   }
 ],
-// {basename: '/meme'}
+
 )
 return <>
 < RouterProvider router={router}/>

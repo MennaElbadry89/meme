@@ -14,7 +14,7 @@ function Footer (){
 
 
     return(
-         <div className='Footer'>
+         <div className='Footer static bottom-0'>
                     <div className="top container">
                         <div className="row mt-5">
             <div className='col-lg-3 col-12'>
@@ -25,7 +25,7 @@ function Footer (){
             </div>
         
             <div className='col-lg-3 col-12'>
-                  <div className="quick ">
+                  <div className="quick">
                             <b>QUICK SHOP</b>
                             <ul>
                                 <li> <Link to={'/'}>Home</Link></li>
@@ -63,12 +63,12 @@ function Footer (){
           </div>
          </div>
 
-            <hr className=' w-75 d-flex 'style={{color: 'gray', alignItems: "center", justifyContent: "center"}} />
+            <hr className='w-75 d-flex'style={{color: 'gray', alignItems: "center", justifyContent: "center"}} />
             
             <div className="container">
                 <div className="row">
                   <div className="col-md-12">
-                    <div className="bottom my-2 mx-5">
+                    <div className="bottom mx-5 my-2">
                     <p>copywrite@ <Link to={"https://www.linkedin.com/in/menna-elbadry21/"}>Menna Elbadry</Link> </p>
                     <img src={visa} alt="" />
                     </div>

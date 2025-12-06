@@ -10,7 +10,7 @@ export default function Layout() {
 
     return(
         <>
-        <div className="Layout">
+        <div className="Layout relative">
            < Navbar/>
            <Outlet/>
            <Footer/>

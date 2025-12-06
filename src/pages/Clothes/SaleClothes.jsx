@@ -16,7 +16,7 @@ export default function Clothes(){
     return(
         <>
         <div className="Products container my-5">
-            <p className='h1 text-center  mb-5' style={{color: 'var(--secondry-color'}}> Clothes Products</p>
+            <p className='h1 text-center  mb-5' style={{color: 'var(--secondry-color'}}> Clothes Products (sale)</p>
             <div className="row">
                 { 
                 isLoadingClothes?
