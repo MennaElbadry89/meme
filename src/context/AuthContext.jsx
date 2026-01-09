@@ -1,13 +1,10 @@
-import { children , createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { signInWithEmailAndPassword, signOut} from 'firebase/auth'
 import { createUserWithEmailAndPassword} from 'firebase/auth'
 import { onAuthStateChanged} from 'firebase/auth'
 
 import {auth , db} from '../firebase/firebase'
 import { doc , setDoc , getDoc} from 'firebase/firestore'
-import { success } from "zod";
-import { data } from "react-router-dom";
-import { set } from "zod/v3";
 
 
 export const authContext = createContext()

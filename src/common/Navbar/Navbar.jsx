@@ -1,6 +1,6 @@
 
 import './Navbar.css'
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { BsHandbagFill } from "react-icons/bs";
 import { GiHighHeel } from "react-icons/gi";
 import { FaHeart } from "react-icons/fa";
@@ -38,19 +38,19 @@ return(
       <CiMenuFries/>
     </button>
     
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+    <div className="navbar-collapse collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav mb-lg-0 mx-auto mb-2">
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page"  to={'/'}>Home</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link " aria-current="page" to={"about"}>About</Link>
+          <Link className="nav-link" aria-current="page" to={"about"}>About</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link " aria-current="page" to={"shop"}>Shop</Link>
+          <Link className="nav-link" aria-current="page" to={"shop"}>Shop</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link " aria-current="page" to={"contact"}>Contact</Link>
+          <Link className="nav-link" aria-current="page" to={"contact"}>Contact</Link>
         </li>
         <li className="nav-item dropdown">
           <Link className="nav-link dropdown-toggle" to={"products"} role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -69,8 +69,8 @@ return(
      { 
      loadingDisplayCurrentUser?
      <div>
-     <div className='spinner border text-light 'style={{width : '15px' , height: '15px'}} ></div>
-      <span className='ms-2 '>Loading</span>
+     <div className='spinner text-light border'style={{width : '15px' , height: '15px'}} ></div>
+      <span className='ms-2'>Loading</span>
      </div>
      :
      !loadingDisplayCurrentUser && !currentUser ?
@@ -83,7 +83,7 @@ return(
     <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Welcome : <span style={{color: 'var(--secondry-color)'}}>{currentUser.firstName}</span>
     </button>
-     <ul className="dropdown-menu p-2 ">
+     <ul className="dropdown-menu p-2">
     <li ><Link to={'/profile'} className="btn btn-info d-block w-100" >Profile</Link></li>
     <li ><Link to={'/orders'} className="btn btn-info d-block w-100 my-1" style={{background: "var(--main-color)"}}>Orders</Link></li>
     <li ><button className="btn btn-danger d-block w-100 mt-1" onClick={logout}
@@ -94,12 +94,12 @@ return(
     }
      <div>
     <Link to={'wishlist'}> < FaHeart className='icon' /> </Link>
-    <sub >({totalQuantityOfWishList})</sub>
+    <sub >{currentUser && (totalQuantityOfWishList)}</sub>
     </div>
 
     <div>
     <Link to={'cart'}> <FaShoppingCart className='icon'/></Link>
-    <sub >({totalQuantityOfCart})</sub>
+    <sub >{currentUser && (totalQuantityOfCart)}</sub>
     </div>
     </div>
 

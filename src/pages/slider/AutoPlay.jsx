@@ -12,32 +12,56 @@ import img5 from '../../../public/imag/imgi_17.jpg'
 
 export default function AutoPlay() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
-    cssEase: "linear"
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+  
   return (
-    <div className="slider-container container pt-5" style={{background: 'lightgray', height: '250px'}}>
+    <div className="slider-container container gap-1 p-3" style={{background: 'lightgray', height: '250px'}}>
       <Slider {...settings}>
       <div >
-        <img src={img1} alt="" />
+        <img src={img1}className="w-100 h-100"alt="" />
       </div>
       <div>
-        <img src= {img2} alt="" />
+        <img src= {img2}className="w-100 h-100"alt="" />
       </div>
       <div>
-        <img src={img3} alt="" />
+        <img src={img3}className="w-100 h-100"alt="" />
       </div>
       <div>
-        <img src={img4} alt="" />
+        <img src={img4} className="w-100 h-100"alt="" />
       </div>
       <div>
-        <img src={img5} alt="" />
+        <img src={img5} className="w-100 h-100"alt="" />
       </div>
       </Slider>
     </div>

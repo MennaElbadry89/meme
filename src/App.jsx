@@ -27,40 +27,40 @@ function App() {
 const router = createBrowserRouter([
   {
     path : '/',
-    element : <Suspense fullback={<LottiHandeler status= 'main' />}><Layout/></Suspense>,
+    element : <Suspense fallback={<LottiHandeler status= 'main' />}><Layout/></Suspense>,
     children : [
       {index: true , element :
-                <Suspense fullback={<LottiHandeler status= 'main' />}> <Home/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'main' />}> <Home/></Suspense> },
       {path: 'about' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <About/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <About/></Suspense> },
       {path: 'shop' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <Shop/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <Shop/></Suspense> },
       {path: 'bags' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <Bags/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <Bags/></Suspense> },
       {path: 'saleBags' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <SaleBags/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <SaleBags/></Suspense> },
       {path: 'shoes' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <Shoes/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <Shoes/></Suspense> },
       {path: 'saleShoes' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <SaleShoes/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <SaleShoes/></Suspense> },
       {path: 'clothes' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <Clothes/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <Clothes/></Suspense> },
       {path: 'saleClothes' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <SaleClothes/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <SaleClothes/></Suspense> },
       {path: 'contact' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <Contact/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <Contact/></Suspense> },
       {path: 'cart' , element :
-                <Suspense fullback={<LottiHandeler status= 'cart' />}> <Cart/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'cart' />}> <Cart/></Suspense> },
       {path: 'wishlist' , element :
-                <Suspense fullback={<LottiHandeler status= 'wishlist' />}> <Wishlist/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'wishlist' />}> <Wishlist/></Suspense> },
       {path: 'register' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <Regiser/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <Regiser/></Suspense> },
       {path: 'login' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <Login/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <Login/></Suspense> },
       {path: 'profile' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <Profile/></Suspense> },
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <Profile/></Suspense> },
       {path: 'orders' , element :
-                <Suspense fullback={<LottiHandeler status= 'page' />}> <Orders/></Suspense> }      
+                <Suspense fallback={<LottiHandeler status= 'page' />}> <Orders/></Suspense> }      
     ],
     errorElement : <LottiHandeler status= 'Err' />
   }

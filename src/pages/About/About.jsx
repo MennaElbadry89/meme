@@ -1,5 +1,4 @@
 import  './About.css'
-import React from "react";
 import { Link } from 'react-router-dom';
 import img from '../../../public/imag/about.jpg'
 

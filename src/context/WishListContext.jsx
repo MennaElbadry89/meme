@@ -1,17 +1,18 @@
-import axios from "axios"
 import { createContext , useContext, useEffect, useState } from "react"
 import Swal from "sweetalert2"
-import { json } from "zod"
-import Product from "../common/Product"
 import { cartContext } from "./CartContext"
+import {authContext} from "./AuthContext"
 
 
 export const wishListContext = createContext()
 
 
 export const WishListContextProvider = ({children})=>{
+    const {currentUser } = useContext(authContext)
 
-    // const {records} = useContext(cartContext)
+    const { cartIdes } = useContext(cartContext)
+    const cartItems = Array.isArray(cartIdes) ? cartIdes : [];
+
     const [wishListItems , setwishListItems] = useState([])
     
     // localStorage.clear()
@@ -46,22 +47,27 @@ export const WishListContextProvider = ({children})=>{
         localStorage.setItem('wishListItems', JSON.stringify(wishListItems))
     },[wishListItems])
 
+    
+    const addToWishList = (product) => {
+  if (!currentUser) {
+    return { success: false, message: "Please login first" };
+  }
 
-    const addToWishList = (product, isAuthenticated = false )=>{
-        // Check if user is authenticated
-        // if (!isAuthenticated) {
-        //     return { success: false, needsAuth: true, message: "Please login or register to add items to wishlist" }
-        // }  
-       
-        const x = wishListItems.some(item => item.id === product.id)
+  const isInWishList = wishListItems.some(item => item.id === product.id);
+  const isInCart = cartItems.some(item => item.id === product.id);
 
-        if(!x && product.stock === 0){
-        setwishListItems([...wishListItems, product])
-        // return { success: true, needsAuth: false } 
-        // }else {
-        // return { success: false, needsAuth: false, message: "Already in wishlist" };
-    }
-    }
+  if (isInCart) {
+    return { success: false, message: "Product already in cart" };
+  }
+
+  if (isInWishList) {
+    return { success: false, message: "Product already in wishlist" };
+  }
+
+  setwishListItems([...wishListItems, product]);
+  return { success: true, message: "Product added to wishlist" };
+};
+
 
 
     const handelDelete = (Product)=>{

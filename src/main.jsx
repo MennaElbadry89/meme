@@ -19,17 +19,17 @@ import { PlaceOrderContextProvider } from './context/PlaceOrderContext.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-    <DisplayContextProvider>
-        <CartContextProvider>
-            <AuthContextProvider>
+      <AuthContextProvider>
+        <DisplayContextProvider>
+            <CartContextProvider>
                 <WishListContextProvider>  
                     <PlaceOrderContextProvider>
                              <App />
                     </PlaceOrderContextProvider>            
                 </WishListContextProvider>
-            </AuthContextProvider>
-        </CartContextProvider>
-    </DisplayContextProvider>
+            </CartContextProvider>
+         </DisplayContextProvider>
+     </AuthContextProvider>
   
 
 )

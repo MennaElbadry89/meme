@@ -1,8 +1,8 @@
 
 import axios from "axios"
-import { createContext , useEffect, useState } from "react"
+import { createContext , useEffect, useState, useContext } from "react"
 import Swal from "sweetalert2"
-import { json } from "zod"
+import {authContext} from "./AuthContext"
 
 export const cartContext = createContext()
 
@@ -13,7 +13,7 @@ export const CartContextProvider = ({children})=>{
     const [records , setRecoeds] = useState([])
     const [isLoadingRecords , setIsLoadingRecords] = useState(false)
     const [errorRecords , setErrorRecords] = useState(null)
-
+    const {currentUser } = useContext(authContext)
     // localStorage.clear()
 
     useEffect(()=>{
@@ -26,9 +26,9 @@ export const CartContextProvider = ({children})=>{
     }, [])
 
 
-    const addToCart = (id, isAuthenticated = false)=>{
+    const addToCart = (id)=>{
         // Check if user is authenticated
-        if (!isAuthenticated) {
+        if (!currentUser) {
             return { success: false, needsAuth: true, message: "Please login or register to add items to cart" }
         }        
         if( !cartIdes[id]){
