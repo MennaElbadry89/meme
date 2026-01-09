@@ -10,9 +10,9 @@ export default function Services(){
 
     return(
         <>
-        <div className="Services">
+        <div className="Services my-5">
             <div className="container">
-                <div className="row w-100">
+                <div className="row w-100 mx-auto text-center">
                     <div className="col-lg-3 col-md-6 my-md-2 text-dark my-lg-5 my-1 flex">
                         <div className='bg-white shadow'>
                             <FaCheck style={{color: 'var(--secondry-color)'}}/>

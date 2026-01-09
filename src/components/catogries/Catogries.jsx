@@ -18,7 +18,7 @@ export default function Catogries(){
         <div className="Catogries">
             <div className="g-1 container">
                 <p className='h1 mb-5 text-center' style={{color: "var(--secondry-color"}}>Catogries</p>
-                <div className="row g-2">
+                <div className="row g-2 mx-2">
                     <div className="col-lg-3 col-md-6">
                         <div className="card d-flex flex-row">
                             <img src={img1}  style={{width: '100px', height: "100px"}} />
@@ -56,7 +56,7 @@ export default function Catogries(){
                         </div>                        
                     </div>
                 </div>
-                <div className="row g-2">
+                <div className="row g-2 mx-2">
                     <div className="col-lg-3 col-md-6">
                         <div className="card d-flex flex-row">
                             <img src={img6}  style={{width: '100px', height: "100px"}} />
@@ -94,7 +94,7 @@ export default function Catogries(){
                         </div>                        
                     </div>
                 </div>
-                <div className="row g-2">
+                {/* <div className="row g-2 mx-2">
                     <div className="col-lg-3 col-md-6">
                         <div className="card d-flex flex-row">
                             <img src={img5} style={{width: '100px', height: "100px"}} />
@@ -131,7 +131,7 @@ export default function Catogries(){
                             </div>
                         </div>                        
                     </div>
-                </div>              
+                </div>               */}
             </div>
         </div>
         
