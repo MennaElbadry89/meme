@@ -85,7 +85,7 @@ return(
     </button>
      <ul className="dropdown-menu p-2">
     <li ><Link to={'/profile'} className="btn btn-info d-block w-100" >Profile</Link></li>
-    <li ><Link to={'/orders'} className="btn btn-info d-block w-100 my-1" style={{background: "var(--main-color)"}}>Orders</Link></li>
+    <li ><Link to={'/orders'} className="btn btn-info d-block w-100 my-1" style={{background: "var(--secondry-color)"}}>Orders</Link></li>
     <li ><button className="btn btn-danger d-block w-100 mt-1" onClick={logout}
      data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</button></li>
 

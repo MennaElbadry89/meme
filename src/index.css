@@ -25,6 +25,6 @@
 
 }
 .btn-primary:hover{
-    background-color: var(--main-color) !important;
+    background-color: var(--secondry-color) !important;
     color: black !important;
 }

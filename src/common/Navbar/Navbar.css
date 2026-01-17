@@ -9,7 +9,7 @@
 
 }
 .Navbar nav .icon{
-    color: var(--main-color) !important;
+    color: var(--secondry-color) !important;
     font-size: 20px;
 }
 .Navbar nav sub{

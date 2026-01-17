@@ -46,22 +46,22 @@ export default function AutoPlay() {
   };
   
   return (
-    <div className="slider-container container overflow-hidden gap-1 p-3" style={{background: 'lightgray', height: '250px'}}>
-      <Slider {...settings}>
+    <div className="slider-container container gap-1 overflow-hidden p-2" style={{background: 'lightgray'}}>
+      <Slider {...settings}  >
       <div   className="overflow-hidden">
-        <img src={img1}className="w-100"alt="" />
+        <img src={img1}className="w-100 object-cover"alt="" />
       </div>
       <div  className="overflow-hidden">
-        <img src= {img2}className="w-100"alt="" />
+        <img src= {img2}className="w-100 object-cover"alt="" />
       </div>
       <div  className="overflow-hidden">
-        <img src={img3}className="w-100"alt="" />
+        <img src={img3}className="w-100 object-cover"alt="" />
       </div>
       <div  className="overflow-hidden">
-        <img src={img4} className="w-100"alt="" />
+        <img src={img4} className="w-100 object-cover"alt="" />
       </div>
       <div  className="overflow-hidden">
-        <img src={img5} className="w-100"alt="" />
+        <img src={img5} className="w-100 object-cover"alt="" />
       </div>
       </Slider>
     </div>

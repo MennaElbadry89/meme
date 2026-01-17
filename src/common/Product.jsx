@@ -176,7 +176,7 @@ const handleaddToWishList = (product)=>{
                             <div className="text-warning h5"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></div>
                             <div className="procces justify-content-between w-100 flex">
                                 <button className="btn"  onClick={()=>handleaddToWishList(value)}>
-                                    <FaHeart style={{color: 'var(--main-color', cursor: 'pointer'}}/>
+                                    <FaHeart style={{color: 'var(--secondry-color', cursor: 'pointer'}}/>
                                 </button>
                                 <button className="btn"
                                   disabled= {productFullInfo.stock - productFullInfo.amount == 0 || isDisabledBtn}
@@ -187,7 +187,7 @@ const handleaddToWishList = (product)=>{
                                             <div className="spinner-border text-primary"></div>
                                         </div>
                                         :
-                                     <FaShoppingCart style={{color: 'var(--main-color', cursor: 'pointer'}}/>
+                                     <FaShoppingCart style={{color: 'var(--secondry-color', cursor: 'pointer'}}/>
 
                                     }
                                 </button >

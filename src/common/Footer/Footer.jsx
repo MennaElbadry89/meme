@@ -68,7 +68,7 @@ function Footer (){
             <div className="container">
                 <div className="row">
                   <div className="col-md-12">
-                    <div className="bottom mx-5 my-2">
+                    <div className="bottom d-flex flex-column flex-md-row justify-content-between align-items-center mx-5 my-2 gap-2">
                     <p>copywrite@ <Link to={"https://www.linkedin.com/in/menna-elbadry21/"}>Menna Elbadry</Link> </p>
                     <img src={visa} alt="" />
                     </div>

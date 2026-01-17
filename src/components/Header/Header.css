@@ -45,6 +45,6 @@
 }
 
 .offers > div .btn-primary{
-    border: 1px solid var(--main-color) !important;
+    border: 1px solid var(--secondry-color) !important;
 }
 
